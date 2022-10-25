@@ -32,7 +32,7 @@ const HomePage = () => {
         // "https://url-shortify.azurewebsites.net/api/v1/url",
         axios({
             method: "post",
-            url: "http://localhost:4000/api/v1/url",
+            url: process.env.REACT_APP_SHORTIFY_BACKEND_URL + "api/v1/url",
             data: {
                 original_url: url,
             },

@@ -7,7 +7,7 @@ const PageNotFound = () => {
     useEffect(() => {
         let path = window.location.pathname.replace("/", "");
         axios
-            .get(process.env.REACT_APP_SHORTIFY_BACKEND_URL + path)
+            .get("https://url-shortify.azurewebsites.net/" + path)
             .then((res) => {
                 if (res && res.data) {
                     window.location.href = res.data;
